@@ -1275,11 +1275,11 @@ function updateGlobalBufferAndViews(buf) {
 }
 
 var STATIC_BASE = 1024,
-    STACK_BASE = 9860128,
+    STACK_BASE = 9860192,
     STACKTOP = STACK_BASE,
-    STACK_MAX = 4617248,
-    DYNAMIC_BASE = 9860128,
-    DYNAMICTOP_PTR = 4617088;
+    STACK_MAX = 4617312,
+    DYNAMIC_BASE = 9860192,
+    DYNAMICTOP_PTR = 4617152;
 
 assert(STACK_BASE % 16 === 0, 'stack must start aligned');
 assert(DYNAMIC_BASE % 16 === 0, 'heap must start aligned');
@@ -1827,7 +1827,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
 
 
 
-// STATICTOP = STATIC_BASE + 4616224;
+// STATICTOP = STATIC_BASE + 4616288;
 /* global initializers */  __ATINIT__.push({ func: function() { ___wasm_call_ctors() } });
 
 
@@ -6676,7 +6676,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
     }
 
   function _emscripten_get_sbrk_ptr() {
-      return 4617088;
+      return 4617152;
     }
 
   function _emscripten_glActiveTexture(x0) { GLctx['activeTexture'](x0) }
@@ -9774,10 +9774,10 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
   function _glTexParameteri(x0, x1, x2) { GLctx['texParameteri'](x0, x1, x2) }
 
   
-  var ___tm_current=4617104;
+  var ___tm_current=4617168;
   
   
-  var ___tm_timezone=(stringToUTF8("GMT", 4617152, 4), 4617152);
+  var ___tm_timezone=(stringToUTF8("GMT", 4617216, 4), 4617216);
   
   function _tzset() {
       // TODO: Use (malleable) environment variables instead of system settings.
